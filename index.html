@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style type="text/tailwindcss">
+    </style>
+</head>
+<body class="p-5 bg-[#ebf8ff]">
+    <header class="py-[20px]">
+        <h2 class="font-bold text-[45px] text-red-800 text-center mb-[20px] md:my-[10px]">Online Shop</h2>
+        <div class="flex justify-center md:justify-between containers my-[20px]">
+           <img class=" hidden md:flex w-[50px] h-[50px]" src="./image.svg" alt="logo" >
+            <input autocomplete="off" class="w-[300px]  border-[1px] shadow-md rounded-md outline-none p-2 search-Input" name="text" type="text" placeholder="Product search">
+        </div>
+    </header>
+    <ul class="list flex flex-wrap gap-[20px] justify-center md:justify-between "></ul>
+     <div id="wrapper" class="modal-wrapper scale-0 flex items-center justify-center fixed left-0 right-0 top-0 bottom-0 bg-[#00000097] backdrop-blur-[5px]">
+        <div class="modal-inner  rounded-md p-[20px] bg-white"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
