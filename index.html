@@ -6,27 +6,30 @@
     <link rel="stylesheet" href="./main.css">
     <title>Document</title>
       <style type="text/tailwindcss">
-      
+       body{
+        background-color: #00008B;
+
+       }
     </style>
     
 </head>
-<body class="p-5 bg-gradient-to-r from-[#0F2027] via-[#203A43] to-[#2C5364] ">
+<body class="p-5   ">
     <header class="py-[20px]">
       <h2 class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-center drop-shadow-lg mb-6"> Online Shop</h2>
         <div class="flex justify-center md:justify-between containers my-[20px]">
             <img class="hidden md:flex w-12 h-12" src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="logo" />
             <div class="gap-[10px] flex justify-around md:justify-start">
-                <input autocomplete="off"name="text"type="text"placeholder="Search products..." class="max-w-[200px] md:min-w-[400px] p-3 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white shadow-lg backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300 search-Input"/>
-                <select class=" w-[100px] md:w-[100px] p-3 select-part rounded-xl border border-white/20 bg-white/10 text-white placeholder-white shadow-lg backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300 search-Input">
+                <input  autocomplete="off"name="text"type="text"placeholder="Search products..." class="max-w-[200px] md:min-w-[400px] p-3 rounded-xl border border-white/20 bg-white/10 text-white placeholder-white shadow-lg backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-[#9EC6F3] transition duration-300 search-Input"/>
+                <select class=" w-[100px] md:w-[100px] p-3 select-part rounded-xl border border-white/20 bg-white/10 text-white placeholder-white shadow-lg backdrop-blur-md focus:outline-none focus:ring-3 focus:ring-[#9EC6F3] transition duration-300 search-Input">
                     <option selected disabled class="bg-[#2C5364]">Select</option>
-                    <option value="0" class="bg-[#2C5364]">All</option>
-                    <option value="1" class="bg-[#2C5364]">Title</option>
-                    <option value="2" class="bg-[#2C5364]">Price</option>
+                    <option value="0" class="bg-[#00008B]">All</option>
+                    <option value="1" class="bg-[#00008B]">Title</option>
+                    <option value="2" class="bg-[#00008B]">Price</option>
                 </select>
             </div>
         </div>
     </header>
-    <ul class="list flex flex-wrap gap-[20px] justify-center md:justify-between "></ul>
+    <ul class="list flex flex-wrap gap-[20px] space-y-5 justify-center md:justify-between "></ul>
      <div id="wrapper" class="modal-wrapper scale-0 flex items-center justify-center fixed left-0 right-0 top-0 bottom-0 bg-[#00000097] backdrop-blur-[5px]">
         <div class="modal-inner  rounded-md p-[20px] bg-white"></div>
     </div>

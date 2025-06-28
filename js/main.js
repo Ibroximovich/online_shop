@@ -47,9 +47,9 @@ function HandleBtn(id){
                 <p class=" text-black text-[17px] line-clamp-3">${res.data.description}</p>
                 <strong class="font-bold text-black text-[17px]">${res.data.price} $</strong>
                 <form autocomplete="off" class="space-y-3  add-form">
-                    <input  class="w-full p-3  border-[1px]  rounded-md shadow-md outline-none" type="text" name="text" placeholder="Enter your name">
-                    <input class="w-full p-3 border-[1px]  rounded-md shadow-md outline-none"  type="tel" name="phone" placeholder="Enter your phone">
-                    <input class="w-full p-3  border-[1px] rounded-md shadow-md outline-none"  type="text" name="adress" placeholder="Enter your adress">
+                    <input required class="w-full p-3  border-[1px]  rounded-md shadow-md outline-none" type="text" name="text" placeholder="Enter your name">
+                    <input required class="w-full p-3 border-[1px]  rounded-md shadow-md outline-none"  type="tel" name="phone" placeholder="Enter your phone">
+                    <input required class="w-full p-3  border-[1px] rounded-md shadow-md outline-none"  type="text" name="adress" placeholder="Enter your adress">
                     <button type="submit" class="w-full bg-green-700 text-white p-2 rounded-md">Order</button>
                 </form>
                 <button onclick ="ClousModal()" class="  md:hidden w-[50px] height =[50px] absolute right-0 top-0">
@@ -72,15 +72,15 @@ function HandleBtn(id){
              message += `<b>Name:${e.target.text.value}</b>\n`
             message += `<b>Phone:${e.target.phone.value}</b>\n`
             message += `<b>Adress:${e.target.adress.value}</b>\n`
-            let data = {
+             let data = {
                 photo:res.data.image,
                 parse_mode:"html",
                 caption:message,
                 chat_id:CHAT_ID
-            }
-            axios.post(api_massage,data).then(res =>{
+             }
+             axios.post(api_massage,data).then(res =>{
                 elModalWrapper.classList.add("scale-0")
-            })
+             })
         })
         
     
@@ -119,8 +119,6 @@ elSelect.addEventListener("change",function(e){
        })
         
      })
-    
-
 // select part end
 
 function ClousModal(){
