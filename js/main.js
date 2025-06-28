@@ -8,6 +8,7 @@ let elList = document.querySelector(".list")
 let elModalWrapper = document.querySelector(".modal-wrapper")
 let elModalInner = document.querySelector(".modal-inner")
 let elInput = document.querySelector(".search-Input")
+let elSelect = document.querySelector(".select-part")
 elList.innerHTML = "loading..."
 function getUser(){
     axios(api).then(data => renderProduct(data.data,elList))
@@ -16,7 +17,6 @@ function getUser(){
 getUser()
 
 // render Product start
-
 function renderProduct(arr,list){
     list.innerHTML = null
     arr.forEach(item =>{
@@ -52,7 +52,7 @@ function HandleBtn(id){
                     <input class="w-full p-3  border-[1px] rounded-md shadow-md outline-none"  type="text" name="adress" placeholder="Enter your adress">
                     <button type="submit" class="w-full bg-green-700 text-white p-2 rounded-md">Order</button>
                 </form>
-                <button onclick ="ClousModal()" class="w-[30px] height =[30px] absolute right-0 top-0">
+                <button onclick ="ClousModal()" class="  md:hidden w-[50px] height =[50px] absolute right-0 top-0">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M6 18L18 6M6 6l12 12" />
@@ -88,9 +88,6 @@ function HandleBtn(id){
     })
    
 }
-function ClousModal(){
-elModalWrapper.classList.add("scale-0")
-}
 
 // search start
   elInput.addEventListener("change",function(e){
@@ -103,5 +100,31 @@ elModalWrapper.classList.add("scale-0")
     })
   })
 // search end
+
+// select part start
+
+elSelect.addEventListener("change",function(e){
+     axios(api).then(data =>{
+        if(e.target.value == "0"){
+            renderProduct(data.data,elList)
+        }
+        else if(e.target.value == "1"){
+         let arr = data.data.sort((a,b) => a.title.localeCompare((b.title)))
+         renderProduct(arr,elList)
+        }
+        else{
+             let arr = data.data.sort((a,b) => a.price - b.price)
+              renderProduct(arr,elList)
+        }
+       })
+        
+     })
+    
+
+// select part end
+
+function ClousModal(){
+elModalWrapper.classList.add("scale-0")
+}
 
 elModalWrapper.addEventListener("click",(e)=> e.target.id == "wrapper" ? elModalWrapper.classList.add("scale-0"):"")
