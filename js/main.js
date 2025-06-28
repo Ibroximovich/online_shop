@@ -40,7 +40,7 @@ function HandleBtn(id){
     axios(`${api}/${id}`).then(res=>{
          elModalWrapper.classList.remove("scale-0")
          elModalInner.innerHTML =`
-         <div class = "flex items-center gap-[20px]">
+         <div class = "md:flex items-center gap-[20px]">
             <img class ="flex items-center md:items-start h-[250px] md:h-[400px] w-[250px] md:w-[300px]  mx-auto mb-[5px]" src="${res.data.image}" alt="logo" width-"300" height="300">
             <div class = "space-y-2 md:w-[300px]">
                 <h3 class="font-bold text-black text-[20px] line-clamp-1">${res.data.title}</h3>
