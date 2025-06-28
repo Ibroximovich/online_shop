@@ -40,7 +40,7 @@ function HandleBtn(id){
     axios(`${api}/${id}`).then(res=>{
          elModalWrapper.classList.remove("scale-0")
          elModalInner.innerHTML =`
-         <div class = "md:flex items-center gap-[20px]">
+         <div class = "md:flex items-center gap-[20px] relative">
             <img class ="flex items-center md:items-start h-[250px] md:h-[400px] w-[250px] md:w-[300px]  mx-auto mb-[5px]" src="${res.data.image}" alt="logo" width-"300" height="300">
             <div class = "space-y-2 md:w-[300px]">
                 <h3 class="font-bold text-black text-[20px] line-clamp-1">${res.data.title}</h3>
@@ -52,6 +52,12 @@ function HandleBtn(id){
                     <input class="w-full p-3  border-[1px] rounded-md shadow-md outline-none"  type="text" name="adress" placeholder="Enter your adress">
                     <button type="submit" class="w-full bg-green-700 text-white p-2 rounded-md">Order</button>
                 </form>
+                <button onclick ="ClousModal()" class="w-[30px] height =[30px] absolute right-0 top-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
          </div>
         `
@@ -73,7 +79,7 @@ function HandleBtn(id){
                 chat_id:CHAT_ID
             }
             axios.post(api_massage,data).then(res =>{
-                elModalWrapper.classList.add("scale-0")
+                
             })
         })
         
@@ -81,6 +87,9 @@ function HandleBtn(id){
         
     })
    
+}
+function ClousModal(){
+elModalWrapper.classList.add("scale-0")
 }
 
 // search start
