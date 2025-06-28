@@ -79,7 +79,7 @@ function HandleBtn(id){
                 chat_id:CHAT_ID
             }
             axios.post(api_massage,data).then(res =>{
-                
+                elModalWrapper.classList.add("scale-0")
             })
         })
         
