@@ -47,9 +47,9 @@ function HandleBtn(id){
                 <p class=" text-black text-[17px] line-clamp-3">${res.data.description}</p>
                 <strong class="font-bold text-black text-[17px]">${res.data.price} $</strong>
                 <form autocomplete="off" class=" space-y-2 md:space-y-3  add-form">
-                    <input required class="w-full p-3  border-[1px]  rounded-md shadow-md outline-none" type="text" name="text" placeholder="Enter your name">
-                    <input required class="w-full p-3 border-[1px]  rounded-md shadow-md outline-none"  type="tel" name="phone" placeholder="Enter your phone">
-                    <input required class="w-full p-3  border-[1px] rounded-md shadow-md outline-none"  type="text" name="adress" placeholder="Enter your adress">
+                    <input required class="w-full p-2 md:p-3  border-[1px]  rounded-md shadow-md outline-none" type="text" name="text" placeholder="Enter your name">
+                    <input required class="w-full p-2 md:p-3 border-[1px]  rounded-md shadow-md outline-none"  type="tel" name="phone" placeholder="Enter your phone">
+                    <input required class="w-full p-2 md:p-3  border-[1px] rounded-md shadow-md outline-none"  type="text" name="adress" placeholder="Enter your adress">
                     <button type="submit" class="w-full bg-green-700 text-white p-2 rounded-md">Order</button>
                 </form>
                 <button onclick ="ClousModal()" class="  md:hidden w-[50px] height =[50px] absolute right-0 top-0">
