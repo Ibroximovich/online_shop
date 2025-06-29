@@ -41,15 +41,15 @@ function HandleBtn(id){
          elModalWrapper.classList.remove("scale-0")
          elModalInner.innerHTML =`
          <div class = "md:flex items-center gap-[20px] relative">
-            <img class ="flex items-center md:items-start h-[250px] md:h-[400px] w-[250px] md:w-[300px]  mx-auto mb-[5px]" src="${res.data.image}" alt="logo" width-"300" height="300">
-            <div class = "space-y-2 md:w-[300px]">
-                <h3 class="font-bold text-black text-[20px] line-clamp-1">${res.data.title}</h3>
+            <img class ="flex items-center md:items-start h-[200px] md:h-[400px] w-[200px] md:w-[300px]  mx-auto mb-[3px] md:mb-[5px]" src="${res.data.image}" alt="logo" width-"300" height="300">
+            <div class = " space-y-1 md:space-y-2  md:w-[300px]">
+                <h3 class="font-bold text-black text-[18px] md:text-[20px] line-clamp-1">${res.data.title}</h3>
                 <p class=" text-black text-[17px] line-clamp-3">${res.data.description}</p>
                 <strong class="font-bold text-black text-[17px]">${res.data.price} $</strong>
-                <form autocomplete="off" class="space-y-3  add-form">
-                    <input required class="w-full p-3  border-[1px]  rounded-md shadow-md outline-none" type="text" name="text" placeholder="Enter your name">
-                    <input required class="w-full p-3 border-[1px]  rounded-md shadow-md outline-none"  type="tel" name="phone" placeholder="Enter your phone">
-                    <input required class="w-full p-3  border-[1px] rounded-md shadow-md outline-none"  type="text" name="adress" placeholder="Enter your adress">
+                <form autocomplete="off" class="  space-y-2 md:space-y-3  add-form">
+                    <input required class="w-full p-1 md:p-3  border-[1px]  rounded-md shadow-md outline-none" type="text" name="text" placeholder="Enter your name">
+                    <input required class="w-full p-1 md:p-3 border-[1px]  rounded-md shadow-md outline-none"  type="tel" name="phone" placeholder="Enter your phone">
+                    <input required class="w-full p-1 md:p-3  border-[1px] rounded-md shadow-md outline-none"  type="text" name="adress" placeholder="Enter your adress">
                     <button type="submit" class="w-full bg-green-700 text-white p-2 rounded-md">Order</button>
                 </form>
                 <button onclick ="ClousModal()" class="  md:hidden w-[50px] height =[50px] absolute right-0 top-0">
