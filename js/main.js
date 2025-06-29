@@ -90,7 +90,7 @@ function HandleBtn(id){
 }
 
 // search start
-  elInput.addEventListener("change",function(e){
+  elInput.addEventListener("input",function(e){
     axios(api).then(data=>{
        let arr = data.data.filter(item =>item.title.toLowerCase().includes(elInput.value.toLowerCase())
 );
